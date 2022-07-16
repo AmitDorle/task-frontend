@@ -1,0 +1,48 @@
+.task-container{
+    background-color: white;
+    width: 350px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(101, 191, 11);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(68, 206, 218, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.del-up-btn-container
+{
+    display: flex;
+    justify-content: center;
+   
+}
+.btn-delete{
+    padding: 10px;
+    background-color: #ef1e1e;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 100px;
+}
+.btn-update{
+    padding: 10px;
+    background-color: #13956a ;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 100px;
+}
+.btn-delete:hover{
+    box-shadow: 3px 2px 5px rgb(70, 119, 235);
+    border-radius: 7px;
+    background-color: rgb(92, 87, 87);;
+}
+.btn-update:hover{
+    box-shadow: 3px 2px 5px black;
+    border-radius: 7px;
+    background-color: rgb(92, 87, 87);
+}

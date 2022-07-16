@@ -1,7 +1,10 @@
 .App {
   text-align: center;
 }
-
+body
+{
+  background-color: aliceblue;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,26 +16,38 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-app-head
+{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 60px;
+    background: -webkit-linear-gradient(rgb(245, 6, 6), rgb(33, 8, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.label
+{
+  color: black;
+}
+.task-add-button-container
+{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.task-add-button
+{
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  width: 150px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.add-task-link
+{
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
