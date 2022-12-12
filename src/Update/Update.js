@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Update.css";
+import swal from 'sweetalert';
 import { useParams } from "react-router-dom";
 import axios from 'axios';
  
@@ -28,7 +29,11 @@ function Update() {
             priority: priority,
             emoji: emoji
         }).then((res) => {
-            alert("Task updated successfully!")
+            swal({
+                title: "Task updated",
+                text: "Task updated successfully!",
+                icon: "success",
+              })
             window.location = "/"
         })
     }

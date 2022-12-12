@@ -19,7 +19,7 @@
    
 }
 .btn-delete{
-    padding: 10px;
+    padding: 3px;
     background-color: #ef1e1e;
     color: white;
     border: none;
@@ -28,7 +28,7 @@
     width: 100px;
 }
 .btn-update{
-    padding: 10px;
+    padding: 3px;
     background-color: #13956a ;
     color: white;
     border: none;

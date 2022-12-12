@@ -1,12 +1,17 @@
 import React from 'react'
 import './Task.css';
 import axios from 'axios';
+import swal from 'sweetalert';
 import { Link } from 'react-router-dom';
 
 function Task(props) {
   function deleteTask(id) {
     axios.post('/delete_task', { id: id }).then((res) => {
-      alert('Task deleted successfully!')
+      swal({
+        title: "Task deleted",
+        text: "Task deleted successfully!",
+        icon: "success",
+      })
       window.location.reload();
     })
   }

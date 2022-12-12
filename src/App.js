@@ -1,19 +1,19 @@
-import Task from './Task/Task';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import './App.css'
+import Task from "./Task/Task";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import "./App.css";
 
 import { Link } from "react-router-dom";
+import Stopwatch from "./Stopwatch/Stopwatch";
 
 function App() {
-
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    axios.get('/tasks').then((response) => {
-      setTasks(response.data.data)
-    })
-  }, [])
+    axios.get("/tasks").then((response) => {
+      setTasks(response.data.data);
+    });
+  }, []);
   /*const tasks = [
    {
       title : "This is task1",
@@ -30,22 +30,38 @@ function App() {
   ];*/
   return (
     <div>
-      <h1 className='task-app-head'>Task App</h1>
-      <hr />
-      <div className='task-add-button-container'>
-      <button type='button' className='task-add-button'><Link to="/add" className='add-task-link'>Add Task</Link></button>
+      <div className="timer">
+        <div>
+          <h1 className="task-app-head">Task App</h1>
+        </div>
+        <div>
+          <Stopwatch />
+        </div>
       </div>
-      <div className='row'>
-      {
+      <hr />
+      <div className="task-add-button-container">
+        <button type="button" className="task-add-button">
+          <Link to="/add" className="add-task-link">
+            Add Task
+          </Link>
+        </button>
+      </div>
+      <div className="row">
+        {
         tasks.map((task) => {
           return (
             <div className="col-md-4 task-info-container">
-          <Task id={task.id} title={task.title} description={task.description}
-            priority={task.priority} emoji={task.emoji} />
-            </div>)
-        })
-      }
-</div>
+              <Task
+                id={task.id}
+                title={task.title}
+                description={task.description}
+                priority={task.priority}
+                emoji={task.emoji}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
